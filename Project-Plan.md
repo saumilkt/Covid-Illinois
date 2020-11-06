@@ -1,6 +1,4 @@
-#H1 
-Week 1
-#
+#  Week 1 #
 
 Dataset: Johns Hopkins Covid Dataset
 
