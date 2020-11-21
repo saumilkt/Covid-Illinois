@@ -35,7 +35,7 @@ def createdf():
                 else:
                     df = pd.concat([df,temp_df])
                 print("Data for " + str(i + 1) + "/" + str(j + 1) + " added")
-            except IOError as e:
+            except IOError:
                 i = i
                 j = j
 
