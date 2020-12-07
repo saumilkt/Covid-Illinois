@@ -1,10 +1,36 @@
+# Week 3 #
+__Progress__:
+- We've consolidated all of the Data from August until Now
+- We've figured out how the project is going to look. It will consist of:
+  - A Main screen that shows a scatterplot of counties superimposed over Illinois. 
+    - We can select between different metrics via dropdown and will have different colors to represent each
+      - Metrics can include cases/deaths/case fatality ratio, and socioeconomic status comparisons as well
+    - Severity of metrics is visualized through changes in hue and opacity
+  - Mousing over each county will show a tooltip that contains basic stats, cases/deaths/case fatality ratio/socioeconomic status info
+  - Clicking on a county will show more detailed county specific graphs, such as cases/deaths over time
+
+__This Week's Objectives__
+- Make graphs interactive by using an interactive plotting library such as MPLD3
+- Gather socioeconomic status data for all counties
+- Work with Rajat to transition project to being some sort of webapp
+
+__Action Items for Week 3:__
+- Make a scatterplot of Cases and Deaths of all Illinois counties using MPLD3: __Kai__
+  > Note: This will likely require making separate graphs to account for Cook County (Chicago)'s outlier nature
+- Make a scatterplot of Cases/Person and Death/Person of all Illinois counties using MPLD3: __Jimmy__
+- Make Cases/Deaths/Case Fatility Ratio over time Plots for individual Counties using MPLD3: __Gabriel__
+- Research Socioeconomic data for all Illinois counties, including median and avg. income, # of hospitals, population: __Saumil__
+
+
+
+
 # Week 2 #
 __Progress__:
 - We have dataframes for all of days from the start of school to 10/31. 
 - Most of the data only includes cases and deaths though, so we need to move to the more data-rich covid daily reports dataset
   - It can be found here: [https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports]
 
-__This Week's Objectives__
+__This Week's Objectives:__
 - Generate Dataframes *for all days starting from start of school to now* from the new dataset
 - Brainstorm Ideas for how to Visualize the Data; during the meeting itself, we came up with a few:
   - Use scatterplot of counties' lat and longitude to overlay data over a map of illinois
