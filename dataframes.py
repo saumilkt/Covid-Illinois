@@ -1,5 +1,31 @@
 import pandas as pd
 
+
+def createdf_date(month, day):
+    filter = ['Admin2', 'Lat', 'Long_', 'Last_Update', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Incidence_Rate', 'Case-Fatality_Ratio']
+    
+    addressMonth = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/'
+    addressMonth = addressMonth + month
+    addressDay = addressMonth + "-"
+    addressDay = addressDay + day
+    
+    link = addressDay + "-2020.csv"
+
+    try:
+        df = pd.read_csv(link)
+
+        df = df.query('Province_State == "Illinois"')
+        df = df.query('Country_Region == "US"')
+
+        df = df.rename(columns = {"Incident_Rate":"Incidence_Rate"})
+        df = df.rename(columns = {"Case_Fatality_Ratio":"Case-Fatality_Ratio"})
+        df = df[filter]
+
+    except IOError:
+        print("No data found for that date")
+    
+    return df
+
 def createdf():
     filter = ['Admin2', 'Lat', 'Long_', 'Last_Update', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Incidence_Rate', 'Case-Fatality_Ratio']
 
