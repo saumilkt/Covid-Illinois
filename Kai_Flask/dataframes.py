@@ -10,7 +10,7 @@ def createdf_date(month, day):
     addressDay = addressDay + day
     
     link = addressDay + "-2020.csv"
-    
+
     try:
         df = pd.read_csv(link)
 
@@ -22,8 +22,8 @@ def createdf_date(month, day):
         df = df[filter]
 
     except IOError:
-        print("No data found for that date")
         df = 0
+        print("No data found for that date")
     
     return df
 

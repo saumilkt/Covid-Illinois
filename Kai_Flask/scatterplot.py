@@ -37,7 +37,7 @@ def create_scatter(day, month, stat):
     tooltips = mpld3.plugins.PointLabelTooltip(scatter, labels=labels)
     mpld3.plugins.connect(fig, tooltips)
 
-    saveLocation = 'static/plots/' + title
+    saveLocation = 'Kai_Flask/static/plots/' + title
 
     plt.savefig(saveLocation)
     return title
